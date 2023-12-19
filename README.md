@@ -15,6 +15,7 @@ In addition:
 * A deposit should not be able to be created that exceeds the outstanding balance of a tradeline.
 * You should return validation errors if a deposit can not be created.
 * Expose endpoints for seeing all deposit for a given tradeline, as well as seeing an individual deposit.
+// this is the only part I didn't get to
 
 Feel free to add any gems to the `Gemfile`, and touch any of the existing code. For example, if you prefer to use PostgreSQL or MySQL over the included SQLite, or a serializer of your choice, please go ahead. This is not required, but you can be as creative as you want.
 

@@ -7,3 +7,19 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Payment.destroy_all
+Tradeline.destroy_all
+
+Tradeline.create!([{
+  name: 'Cool credit card',
+  amount: 1000.00
+},
+{
+  name: 'Cooler credit card',
+  amount: 2000.00
+},
+{
+  name: 'Coolest credit card',
+  amount: 30.00
+}])

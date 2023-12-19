@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_13_043029) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_15_234218) do
+  create_table "payments", force: :cascade do |t|
+    t.decimal "amount", precision: 8, scale: 2, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "tradeline_id"
+    t.index ["tradeline_id"], name: "index_payments_on_tradeline_id"
+  end
+
   create_table "tradelines", force: :cascade do |t|
     t.string "name", null: false
     t.decimal "amount", precision: 8, scale: 2

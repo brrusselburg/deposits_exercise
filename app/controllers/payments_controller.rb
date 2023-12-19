@@ -1,16 +1,15 @@
-class TradelinesController < ApplicationController
+class PaymentsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
   def index
-    tradelines = Tradeline.all
-
-    render json: tradelines
+    payments = Payment.all
+    render json: payments
   end
 
   def show
-    tradeline = Tradeline.find(params[:id])
+    payment = Payment.find(params[:id])
 
-    render json: tradeline
+    render json: payment
   end
 
   private
